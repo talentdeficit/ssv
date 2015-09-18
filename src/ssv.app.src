@@ -1,0 +1,17 @@
+{application, ssv,
+[
+    {description, "parse comma separated values. or tab separated values. or really any kind of separated values"},
+    {vsn, "0.1.0"},
+    {modules, [ssv, ssv_read]},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []},
+    {files, [
+      "src",
+      "rebar.lock",
+      "LICENSE"
+    ]}
+]}.
