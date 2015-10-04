@@ -8,7 +8,7 @@
 
 
 -type read_opts() :: [read_opt()].
--type read_opt() :: drop_header.
+-type read_opt() :: remove_header.
 
 -export_type([read_opts/0]).
 
@@ -26,7 +26,7 @@ read(SSV) when is_binary(SSV) -> ssv_read:read(SSV, []).
 %% read a utf8 binary containing csv records and output a list of erlang tuples, one
 %% for each csv record
 %%
-%% the `drop_header' option will drop the first row read from the result list
+%% the `remove_header' option will drop the first row read from the result list
 -spec read(binary(), read_opts()) -> [tuple()].
 
 read(SSV, Opts) when is_binary(SSV) -> ssv_read:read(SSV, Opts).
